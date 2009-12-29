@@ -1,0 +1,154 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,img,input,textarea,p,blockquote,table,th,td,a,abbr,acronym,address,caption,cite,code,dfn,em,strong,th,var,hr{margin:0;padding:0;border:0;text-decoration:none;font-style:normal;font-weight:normal;text-align:left;border-collapse:collapse;border-spacing:0;list-style:none;}
+input:focus,a:focus,textarea:focus{outline:0;}
+sup,sub{vertical-align:baseline;position:relative;top:-0.4em;}sub{top:0.4em;}
+html,body,textarea,legend{font:14px/22px Helvetica,Arial,Verdana,sans-serif;color:#444;}
+
+h1 { font-size: 28px; }
+h2 { font-size: 22px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5,
+h6 { font-size: 14px; }
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+a { 
+    color: #09F; 
+    background: rgba(255,255,255,0);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    padding: 0 2px;
+    font-style: inherit;
+}
+a:hover { 
+    color: #FFF; 
+    background: #09F;
+}
+
+p,
+ul,
+ol,
+dl,
+table { margin-bottom: 14px; }
+
+.hr {
+    text-indent: -999em;
+    height: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 14px;
+}
+
+/**
+ * Tables
+ */
+table { width: 100%; }
+tbody tr:nth-child(odd) { background: #EEE; }
+tbody tr:hover { background: #BFBFBF; }
+thead tr,
+th { 
+    background: #BFBFBF; 
+    font-weight: bold;
+}
+th a { 
+    background: #BFBFBF; 
+    color: #404040;
+    display: block;
+}
+
+th,
+td { padding: 0 5px; }
+
+/**
+ * Forms
+ */
+label { font-weight: bold; }
+    .input.text label,
+    .input.textarea label,
+    .input.textselect label { display: block; }
+        .error label,
+        .error-message,
+        .notice,
+        .error { color: #A00; }
+        .success-message,
+        .success { color: #0A0; }
+
+.input {
+    margin: 0 0 24px; 
+    clear: left;
+    position: relative;
+}
+    .input.text input,
+    .input.textarea textarea,
+    .input.select select,
+    .input.password input {
+        border: 1px solid #C3C3C3;
+        border-right-color: #E5E5E5;
+        border-bottom-color: #E5E5E5;
+        padding: 3px 3px 1px;
+        height: 24px;
+        display: block;
+        width: 294px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.5s;
+    }
+        .input.textarea textarea {
+            height: 100px;
+            width: 454px;
+            resize: vertical;
+        }
+        
+        .input.text input:focus,
+        .input.textarea textarea:focus,
+        .input.select select:focus,
+        .input.password input:focus {
+            border: 1px solid #00527F;
+            border-right-color: #afc3ce;
+            border-bottom-color: #afc3ce;
+            color: #00527F;
+        }
+
+.checkbox input,
+.radio input { margin: -3px 3px 0 0; }
+
+.submit input,
+button {
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #E5E5E5;
+    border-right-color: #C3C3C3;
+    border-bottom-color: #C3C3C3;
+    background: #E5E5E5;
+}
+    .submit input:hover,
+    button:hover { background: #09F; }
+    .submit input:active,
+    button:active { background: #00527F; }
+    .submit input.disabled,
+    button.disabled { background: #002F3F; }
+
+/**
+ * Cake Debug Output
+ */
+.cake-sql-log {
+    border: 20px solid #FFF;
+    border-top: 2px solid #444;
+}
+.cake-sql-log caption {
+    text-align: center;
+    color: #444;
+    font-weight: bold;
+    border: 10px solid #FFF;
+    border-top: 1px solid #BBB;
+    border-bottom: 0;
+    width: 100%;
+}
+.cake-sql-log tr td:nth-child(2) { font: 10px/14px 'Monaco', 'Courier New', Courier, monospace; }
+.cake-sql-log thead th:nth-child(4),
+.cake-sql-log thead th:nth-child(5),
+.cake-sql-log thead th:nth-child(6) { text-align: right; }

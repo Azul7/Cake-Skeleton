@@ -1,0 +1,16 @@
+This is a bare repo of CakePHP 1.2.5.
+
+It is intended as a base for multiple applications.
+
+There is a skel that includes many useful helpers to bake projects from.
+
+------------------------------------------------------------
+$ cake bake project -skel vendors/shells/templates/skel
+------------------------------------------------------------
+
+To run the schema, you will need to change the class name in config/sql/schema.php to match your application directory.
+If your directory is titled 'awesome', your schema should read 
+
+<?php
+class AwesomeSchema extends CakeSchema { ... }
+?>

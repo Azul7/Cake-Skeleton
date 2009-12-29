@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # asset tracking
+    RewriteRule ^css/[\d]+/(.*)$ /css/$1 [L]
+    RewriteRule ^js/[\d]+/(.*)$ /js/$1 [L]
+    RewriteRule ^flash/[\d]+/(.*)$ /flash/$1 [L]
+    RewriteRule ^img/[\d]+/(.*)$ /img/$1 [L]
+    
+    # force trailing slash on all URLs
+    # http://bakery.cakephp.org/articles/view/add-trailing-slash-to-cakephp
+    RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/|#(.*))$ 
+    RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+    # normal cakephp rewrite
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f    
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType application/x-shockwave-flash "access plus 1 year"
+</IfModule>
