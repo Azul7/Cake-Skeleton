@@ -6,6 +6,8 @@ There is a skel that includes many useful helpers to bake projects from.
 
 ------------------------------------------------------------
 $ cake bake project -skel vendors/shells/templates/skel
+or if that doesn't work,
+$ cake bake project -skel /full/path/to/cake/vendors/shells/templates/skel
 ------------------------------------------------------------
 
 To run the schema, you will need to change the class name in config/sql/schema.php to match your application directory.
